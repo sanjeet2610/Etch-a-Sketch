@@ -1,8 +1,28 @@
 
+const header = document.createElement("div");
+const body = document.querySelector("body");
+header.style.marginBottom = "12px";
+body.appendChild(header);
+
+const span = document.createElement("span");
+span.textContent = "Click this button to change grid size =>";
+span.style.color = "brown";
+header.appendChild(span);
+span.style.marginRight = "4px";
+
+
+const button = document.createElement("button");
+button.textContent = "Click here";
+header.appendChild(button);
+
+
 const parent = document.createElement("div");
 parent.classList.add("parent");
-const body = document.querySelector("body");
+
 body.appendChild(parent);
+
+
+
 for (let i = 0; i < 256; i++) {
     const child = document.createElement("div");
     child.classList.add("child");
@@ -24,4 +44,5 @@ children.forEach(child => {
         child.style.backgroundColor = "orange";
     });
 });
+
 
