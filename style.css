@@ -9,13 +9,18 @@ body {
     height: 100vh;
     justify-content: center;
     align-items: flex-end;
+    background-color: skyblue
 }
 
 .parent {
+    box-sizing: content-box;
     background-color: blue;
     display: flex;
     flex-wrap: wrap;
     margin-bottom: 50px;
+    border-radius: 8px;
+    overflow: hidden;
+    border: 4px solid gray;
 }
 
 .parent .child {

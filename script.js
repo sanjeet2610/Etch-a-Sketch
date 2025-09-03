@@ -18,3 +18,10 @@ children.forEach(function (child) {
     child.style.height = size + "px";
     child.style.width = size + "px";
 });
+
+children.forEach(child => {
+    child.addEventListener("mouseover", () => {
+        child.style.backgroundColor = "orange";
+    });
+});
+
