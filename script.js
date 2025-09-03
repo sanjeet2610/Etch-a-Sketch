@@ -39,11 +39,17 @@ children.forEach(function (child) {
     child.style.width = size + "px";
 });
 
-children.forEach(child => {
-    child.addEventListener("mouseenter", () => {
-        child.style.backgroundColor = "orange";
+colorize(children);
+
+function colorize(children) {
+    let colors = ['yellow', 'brown', 'green', 'blue', 'red', 'orange', 'black', 'white'];
+    children.forEach(child => {
+        child.addEventListener("mouseenter", () => {
+            const color = colors[parseInt(Math.random() * 8)];
+            child.style.backgroundColor = color;
+        });
     });
-});
+}
 
 button.addEventListener("click", () => {
     const new_n = prompt("Enter the size of grid (under 100) :");
@@ -63,11 +69,7 @@ button.addEventListener("click", () => {
         child.style.height = newSize + "px";
     });
 
-    newChildren.forEach(child => {
-        child.addEventListener("mouseenter", () => {
-            child.style.backgroundColor = "yellow";
-        });
-    });
+    colorize(newChildren);
 });
 
 
