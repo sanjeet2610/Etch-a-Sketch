@@ -44,7 +44,7 @@ children.forEach(function (child) {
 colorize(children);
 
 function colorize(children) {
-    let colors = ['yellow', 'brown', 'green', 'blue', 'red', 'orange', 'gray', 'indigo', 'deepOrange'];
+    let colors = ['yellow', 'brown', 'green', 'blue', 'red', 'orange', 'gray', 'indigo', 'darkorange'];
     children.forEach(child => {
         child.addEventListener("mouseenter", () => {
             const color = colors[parseInt(Math.random() * 9)];
