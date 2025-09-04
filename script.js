@@ -7,12 +7,14 @@ body.appendChild(header);
 const span = document.createElement("span");
 span.textContent = "Click this button to change grid size =>";
 span.style.color = "brown";
+span.style.fontWeight = "bold";
 header.appendChild(span);
 span.style.marginRight = "4px";
 
 
 const button = document.createElement("button");
 button.textContent = "Click here";
+button.style.fontWeight = "bold";
 header.appendChild(button);
 
 
@@ -42,10 +44,10 @@ children.forEach(function (child) {
 colorize(children);
 
 function colorize(children) {
-    let colors = ['yellow', 'brown', 'green', 'blue', 'red', 'orange', 'black', 'white'];
+    let colors = ['yellow', 'brown', 'green', 'blue', 'red', 'orange', 'gray', 'indigo', 'deepOrange'];
     children.forEach(child => {
         child.addEventListener("mouseenter", () => {
-            const color = colors[parseInt(Math.random() * 8)];
+            const color = colors[parseInt(Math.random() * 9)];
             child.style.backgroundColor = color;
         });
     });
